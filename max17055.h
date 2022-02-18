@@ -5,25 +5,18 @@
 extern "C" {
 #endif
 
+#include "i2c.h"
+#include "max17055_reg.h"
 #include <math.h>
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
 
-typedef int32_t (*max17055_write_ptr)(void *, uint8_t, const uint8_t *, uint16_t);
-typedef int32_t (*max17055_read_ptr)(void *, uint8_t, uint8_t *, uint16_t);
-
-typedef struct {
-    max17055_write_ptr write_reg;
-    max17055_read_ptr read_reg;
-    void *handle;
-} max17055_ctx_t;
-
 #define MAX17055_I2C_ADD_L (0x36 << 1)
 #define MAX17055_ID        0x4010
 
-#ifdef __cplusplus
-}
-#endif
+void max17055_init(void);
+void i2c_write_data_u16(uint16_t MemAddress, uint16_t *pData, uint16_t Size);
+void i2c_read_data_u16(uint16_t MemAddress, uint16_t *pData, uint16_t Size);
 
 #endif /* MAX17055_H */
