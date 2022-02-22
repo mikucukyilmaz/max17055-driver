@@ -7,6 +7,7 @@ extern "C" {
 
 #include "i2c.h"
 #include "max17055_reg.h"
+#include "cmsis_os.h"
 #include <math.h>
 #include <stdbool.h>
 #include <stddef.h>
@@ -15,8 +16,8 @@ extern "C" {
 #define MAX17055_I2C_ADD_L (0x36 << 1)
 #define MAX17055_ID        0x4010
 
-void max17055_init(void);
 void i2c_write_data_u16(uint16_t MemAddress, uint16_t *pData, uint16_t Size);
 void i2c_read_data_u16(uint16_t MemAddress, uint16_t *pData, uint16_t Size);
+void max17055_start(void);
 
 #endif /* MAX17055_H */
