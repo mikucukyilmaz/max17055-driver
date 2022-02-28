@@ -117,6 +117,8 @@ extern "C" {
 #define MAX17055_AT_TTE_REG          0xDD
 #define MAX17055_AT_AV_SOC_REG       0xDE
 #define MAX17055_AT_AV_CAP_REG       0xDF
+#define MAX17055_VFSOC_REG           0xFF
+#define MAX17055_VFOCV_REG           0xFB
 
 #define MAX17055_SOFTWAKEUP 0x60
 typedef struct {
@@ -127,7 +129,7 @@ typedef union {
     uint16_t val;
     struct {
         uint16_t v_recovery : 7;
-        uint16_t v_empty   : 9;
+        uint16_t v_empty    : 9;
     } bits;
 } max17055_vempty_t;
 
@@ -165,6 +167,27 @@ typedef union {
         uint16_t B_removal : 1;
     } bits;
 } max17055_status_t;
+
+typedef struct {
+    uint16_t val;
+    struct {
+        uint16_t             : 4;
+        uint16_t learn_stage : 3;
+        uint16_t             : 9;
+    } bits;
+} max17055_learncfg_t;
+
+typedef struct {
+    uint16_t val;
+    struct {
+        uint16_t          : 4;
+        uint16_t model_id : 4;
+        uint16_t          : 2;
+        uint16_t vchg     : 1;
+        uint16_t          : 4;
+        uint16_t refresh  : 1;
+    } bits;
+} max17055_modelcfg_t;
 
 #ifdef __cplusplus
 }
