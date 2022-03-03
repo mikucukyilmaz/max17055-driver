@@ -16,12 +16,6 @@ extern "C" {
 #include <stdio.h>
 #include <strings.h>
 
-#define MAX17055_I2C_ADD_L (0x36 << 1)
-#define MAX17055_ID        0x4010
-
-static int32_t max_platform_write(void *handle, uint8_t reg, uint8_t *bufp, uint16_t len);
-static int32_t max_platform_read(void *handle, uint8_t reg, uint8_t *bufp, uint16_t len);
-
 typedef int32_t (*max17055_write_ptr)(void *, uint8_t, uint8_t *, uint16_t);
 typedef int32_t (*max17055_read_ptr)(void *, uint8_t, uint8_t *, uint16_t);
 
@@ -57,10 +51,6 @@ typedef union {
     int32_t i32bit;
     uint8_t u8bit[4];
 } axis1bit32_t;
-
-void max17055_start(void);
-void i2c_write_data_u16(uint16_t MemAddress, uint16_t *pData, uint16_t Size);
-void i2c_read_data_u16(uint16_t MemAddress, uint16_t *pData, uint16_t Size);
 
 int32_t max17055_devname_get(max17055_ctx_t *ctx, uint16_t *val);
 int32_t max17055_repCap_get(max17055_ctx_t *ctx, uint16_t *val);
