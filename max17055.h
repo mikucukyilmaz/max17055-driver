@@ -14,6 +14,7 @@ extern "C" {
 #include <stddef.h>
 #include <stdint.h>
 #include <stdio.h>
+#include <string.h>
 #include <strings.h>
 
 typedef int32_t (*max17055_write_ptr)(void *, uint8_t, uint8_t *, uint16_t);
@@ -55,9 +56,11 @@ typedef union {
 int32_t max17055_devname_get(max17055_ctx_t *ctx, uint16_t *val);
 int32_t max17055_repCap_get(max17055_ctx_t *ctx, uint16_t *val);
 int32_t max17055_avCap_get(max17055_ctx_t *ctx, uint16_t *val);
-int32_t max17055_fullCapRep_get(max17055_ctx_t *ctx, uint16_t *val);
+int32_t max17055_fullcaprep_get(max17055_ctx_t *ctx, uint16_t *val);
+int32_t max17055_fullcaprep_set(max17055_ctx_t *ctx, uint16_t val);
 int32_t max17055_fullCap_get(max17055_ctx_t *ctx, uint16_t *val);
 int32_t max17055_fullcapnom_get(max17055_ctx_t *ctx, uint16_t *val);
+int32_t max17055_fullcapnom_set(max17055_ctx_t *ctx, uint16_t val);
 int32_t max17055_repSoc_get(max17055_ctx_t *ctx, uint16_t *val);
 int32_t max17055_avSoc_get(max17055_ctx_t *ctx, uint16_t *val);
 int32_t max17055_rCell_get(max17055_ctx_t *ctx, uint16_t *val);
@@ -78,6 +81,12 @@ int32_t max17055_tempco_get(max17055_ctx_t *ctx, uint16_t *val);
 int32_t max17055_tempco_set(max17055_ctx_t *ctx, uint16_t val);
 int32_t max17055_qrTable00_set(max17055_ctx_t *ctx, uint16_t val);
 int32_t max17055_qrTable10_set(max17055_ctx_t *ctx, uint16_t val);
+int32_t max17055_qrTable20_set(max17055_ctx_t *ctx, uint16_t val);
+int32_t max17055_qrTable30_set(max17055_ctx_t *ctx, uint16_t val);
+int32_t max17055_qrTable00_get(max17055_ctx_t *ctx, uint16_t *val);
+int32_t max17055_qrTable10_get(max17055_ctx_t *ctx, uint16_t *val);
+int32_t max17055_qrTable20_get(max17055_ctx_t *ctx, uint16_t *val);
+int32_t max17055_qrTable30_get(max17055_ctx_t *ctx, uint16_t *val);
 int32_t max17055_status_set(max17055_ctx_t *ctx, max17055_status_t val);
 int32_t max17055_status_get(max17055_ctx_t *ctx, max17055_status_t *val);
 int32_t max17055_vcell_get(max17055_ctx_t *ctx, uint16_t *val);
@@ -97,5 +106,8 @@ int32_t max17055_hibcfg_set(max17055_ctx_t *ctx, uint16_t val);
 int32_t max17055_hibcfg_get(max17055_ctx_t *ctx, uint16_t *val);
 int32_t max17055_modelcfg_set(max17055_ctx_t *ctx, max17055_modelcfg_t val);
 int32_t max17055_modelcfg_get(max17055_ctx_t *ctx, max17055_modelcfg_t *val);
-
+int32_t max17055_mixcap_get(max17055_ctx_t *ctx, uint16_t *val);
+int32_t max17055_dqacc_get(max17055_ctx_t *ctx, uint16_t *val);
+int32_t max17055_dpacc_get(max17055_ctx_t *ctx, uint16_t *val);
+int32_t max17055_vfocv_get(max17055_ctx_t *ctx, uint16_t *val);
 #endif /* MAX17055_H */

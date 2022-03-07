@@ -182,6 +182,15 @@ int32_t max17055_fullcaprep_get(max17055_ctx_t *ctx, uint16_t *val)
     return ret;
 }
 
+int32_t max17055_fullcaprep_set(max17055_ctx_t *ctx, uint16_t val)
+{
+    int32_t ret;
+    short_uint8 _val;
+    _val.u16bit = val;
+    ret         = max17055_write_reg(ctx, MAX17055_FULL_CAP_REP_REG, (uint8_t *)&_val, 2);
+    return ret;
+}
+
 int32_t max17055_tte_get(max17055_ctx_t *ctx, uint16_t *val)
 {
     int32_t ret;
@@ -382,6 +391,15 @@ int32_t max17055_fullcapnom_get(max17055_ctx_t *ctx, uint16_t *val)
     short_uint8 _val;
     ret  = max17055_read_reg(ctx, MAX17055_FULL_CAP_NOM_REG, (uint8_t *)&_val, 2);
     *val = _val.u16bit;
+    return ret;
+}
+
+int32_t max17055_fullcapnom_set(max17055_ctx_t *ctx, uint16_t val)
+{
+    int32_t ret;
+    short_uint8 _val;
+    _val.u16bit = val;
+    ret         = max17055_write_reg(ctx, MAX17055_FULL_CAP_NOM_REG, (uint8_t *)&_val, 2);
     return ret;
 }
 
@@ -714,11 +732,75 @@ int32_t max17055_qrTable00_set(max17055_ctx_t *ctx, uint16_t val)
     ret         = max17055_write_reg(ctx, MAX17055_QR_TABLE00_REG, (uint8_t *)&_val, 2);
     return ret;
 }
+
 int32_t max17055_qrTable10_set(max17055_ctx_t *ctx, uint16_t val)
 {
     int32_t ret;
     short_uint8 _val;
     _val.u16bit = val;
     ret         = max17055_write_reg(ctx, MAX17055_QR_TABLE10_REG, (uint8_t *)&_val, 2);
+    return ret;
+}
+
+int32_t max17055_qrTable20_set(max17055_ctx_t *ctx, uint16_t val)
+{
+    int32_t ret;
+    short_uint8 _val;
+    _val.u16bit = val;
+    ret         = max17055_write_reg(ctx, MAX17055_QR_TABLE20_REG, (uint8_t *)&_val, 2);
+    return ret;
+}
+
+int32_t max17055_qrTable30_set(max17055_ctx_t *ctx, uint16_t val)
+{
+    int32_t ret;
+    short_uint8 _val;
+    _val.u16bit = val;
+    ret         = max17055_write_reg(ctx, MAX17055_QR_TABLE30_REG, (uint8_t *)&_val, 2);
+    return ret;
+}
+
+int32_t max17055_qrTable00_get(max17055_ctx_t *ctx, uint16_t *val)
+{
+    int32_t ret;
+    short_uint8 _val;
+    ret = max17055_read_reg(ctx, MAX17055_QR_TABLE00_REG, (uint8_t *)&_val, 2);
+    *val = _val.u16bit;
+    return ret;
+}
+
+int32_t max17055_qrTable10_get(max17055_ctx_t *ctx, uint16_t *val)
+{
+    int32_t ret;
+    short_uint8 _val;
+    ret = max17055_read_reg(ctx, MAX17055_QR_TABLE10_REG, (uint8_t *)&_val, 2);
+    *val = _val.u16bit;
+    return ret;
+}
+
+int32_t max17055_qrTable20_get(max17055_ctx_t *ctx, uint16_t *val)
+{
+    int32_t ret;
+    short_uint8 _val;
+    ret = max17055_read_reg(ctx, MAX17055_QR_TABLE20_REG, (uint8_t *)&_val, 2);
+    *val = _val.u16bit;
+    return ret;
+}
+
+int32_t max17055_qrTable30_get(max17055_ctx_t *ctx, uint16_t *val)
+{
+    int32_t ret;
+    short_uint8 _val;
+    ret = max17055_read_reg(ctx, MAX17055_QR_TABLE30_REG, (uint8_t *)&_val, 2);
+    *val = _val.u16bit;
+    return ret;
+}
+
+int32_t max17055_vfocv_get(max17055_ctx_t *ctx, uint16_t *val)
+{
+    int32_t ret;
+    short_uint8 _val;
+    ret = max17055_read_reg(ctx, MAX17055_VFOCV_REG, (uint8_t *)&_val, 2);
+    *val = _val.u16bit;
     return ret;
 }
