@@ -69,6 +69,7 @@ int32_t max17055_vFSOC_get(max17055_ctx_t *ctx, uint16_t *val);
 int32_t max17055_vRipple_get(max17055_ctx_t *ctx, uint16_t *val);
 int32_t max17055_age_get(max17055_ctx_t *ctx, uint16_t *val);
 int32_t max17055_cycles_get(max17055_ctx_t *ctx, uint16_t *val);
+int32_t max17055_cycles_set(max17055_ctx_t *ctx, uint16_t val);
 int32_t max17055_temp_get(max17055_ctx_t *ctx, int16_t *val);
 int32_t max17055_vcell_get(max17055_ctx_t *ctx, uint16_t *val);
 int32_t max17055_current_get(max17055_ctx_t *ctx, int16_t *val);
@@ -107,7 +108,9 @@ int32_t max17055_hibcfg_get(max17055_ctx_t *ctx, uint16_t *val);
 int32_t max17055_modelcfg_set(max17055_ctx_t *ctx, max17055_modelcfg_t val);
 int32_t max17055_modelcfg_get(max17055_ctx_t *ctx, max17055_modelcfg_t *val);
 int32_t max17055_mixcap_get(max17055_ctx_t *ctx, uint16_t *val);
+int32_t max17055_mixcap_set(max17055_ctx_t *ctx, uint16_t val);
 int32_t max17055_dqacc_get(max17055_ctx_t *ctx, uint16_t *val);
 int32_t max17055_dpacc_get(max17055_ctx_t *ctx, uint16_t *val);
 int32_t max17055_vfocv_get(max17055_ctx_t *ctx, uint16_t *val);
+int32_t max17055_mixsoc_get(max17055_ctx_t *ctx, uint16_t *val);
 #endif /* MAX17055_H */
