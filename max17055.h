@@ -5,17 +5,8 @@
 extern "C" {
 #endif
 
-#include "cmsis_os.h"
-#include "i2c.h"
 #include "max17055_reg.h"
-#include "usart.h"
-#include <math.h>
-#include <stdbool.h>
-#include <stddef.h>
-#include <stdint.h>
-#include <stdio.h>
-#include <string.h>
-#include <strings.h>
+
 
 typedef int32_t (*max17055_write_ptr)(void *, uint8_t, uint8_t *, uint16_t);
 typedef int32_t (*max17055_read_ptr)(void *, uint8_t, uint8_t *, uint16_t);
