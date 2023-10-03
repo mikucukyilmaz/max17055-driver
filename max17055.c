@@ -509,11 +509,11 @@ int32_t max17055_tempco_get(max17055_ctx_t *ctx, uint16_t *val)
     return ret;
 }
 
-int32_t max17055_vempty_set(max17055_ctx_t *ctx, max17055_vempty_t val)
+int32_t max17055_vempty_set(max17055_ctx_t *ctx, uint16_t val)
 {
     int32_t ret;
     short_uint8 _val;
-    _val.u16bit = val.val;
+    _val.u16bit = val;
     ret         = max17055_write_reg(ctx, MAX17055_VEMPTY_REG, (uint8_t *)&_val, 2);
     return ret;
 }

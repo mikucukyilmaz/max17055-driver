@@ -89,7 +89,7 @@ int32_t max17055_ichgterm_set(max17055_ctx_t *ctx, uint16_t val);
 int32_t max17055_ttf_get(max17055_ctx_t *ctx, uint16_t *val);
 int32_t max17055_learncfg_get(max17055_ctx_t *ctx, max17055_learncfg_t *val);
 int32_t max17055_learncfg_set(max17055_ctx_t *ctx, max17055_learncfg_t val);
-int32_t max17055_vempty_set(max17055_ctx_t *ctx, max17055_vempty_t val);
+int32_t max17055_vempty_set(max17055_ctx_t *ctx, uint16_t val);
 int32_t max17055_fstat_get(max17055_ctx_t *ctx, max17055_fstat_t *val);
 int32_t max17055_dqacc_set(max17055_ctx_t *ctx, uint16_t val);
 int32_t max17055_dpacc_set(max17055_ctx_t *ctx, uint16_t val);
