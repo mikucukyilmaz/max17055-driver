@@ -74,7 +74,7 @@ int32_t max17055_status_get(max17055_ctx_t *ctx, max17055_status_t *val)
 //   return ret;
 // }
 
-int32_t max17055_repCap_get(max17055_ctx_t *ctx, uint16_t *val)
+int32_t max17055_rep_cap_get(max17055_ctx_t *ctx, uint16_t *val)
 {
     int32_t ret;
     short_uint8 _val;
@@ -83,7 +83,7 @@ int32_t max17055_repCap_get(max17055_ctx_t *ctx, uint16_t *val)
     return ret;
 }
 
-int32_t max17055_repSoc_get(max17055_ctx_t *ctx, uint16_t *val)
+int32_t max17055_rep_soc_get(max17055_ctx_t *ctx, uint16_t *val)
 {
     int32_t ret;
     short_uint8 _val;
@@ -155,7 +155,7 @@ int32_t max17055_mixsoc_get(max17055_ctx_t *ctx, uint16_t *val)
     return ret;
 }
 
-int32_t max17055_avsoc_get(max17055_ctx_t *ctx, uint16_t *val)
+int32_t max17055_avg_soc_get(max17055_ctx_t *ctx, uint16_t *val)
 {
     int32_t ret;
     short_uint8 _val;
@@ -182,7 +182,7 @@ int32_t max17055_mixcap_set(max17055_ctx_t *ctx, uint16_t val)
     return ret;
 }
 
-int32_t max17055_fullcaprep_get(max17055_ctx_t *ctx, uint16_t *val)
+int32_t max17055_full_cap_rep_get(max17055_ctx_t *ctx, uint16_t *val)
 {
     int32_t ret;
     short_uint8 _val;
@@ -191,7 +191,7 @@ int32_t max17055_fullcaprep_get(max17055_ctx_t *ctx, uint16_t *val)
     return ret;
 }
 
-int32_t max17055_fullcaprep_set(max17055_ctx_t *ctx, uint16_t val)
+int32_t max17055_full_cap_rep_set(max17055_ctx_t *ctx, uint16_t val)
 {
     int32_t ret;
     short_uint8 _val;
@@ -376,7 +376,7 @@ int32_t max17055_ichgterm_get(max17055_ctx_t *ctx, uint16_t *val)
     return ret;
 }
 
-int32_t max17055_avcap_get(max17055_ctx_t *ctx, uint16_t *val)
+int32_t max17055_avg_cap_get(max17055_ctx_t *ctx, uint16_t *val)
 {
     int32_t ret;
     short_uint8 _val;
@@ -403,7 +403,7 @@ int32_t max17055_devname_get(max17055_ctx_t *ctx, uint16_t *val)
     return ret;
 }
 
-int32_t max17055_fullcapnom_get(max17055_ctx_t *ctx, uint16_t *val)
+int32_t max17055_full_cap_nom_get(max17055_ctx_t *ctx, uint16_t *val)
 {
     int32_t ret;
     short_uint8 _val;
@@ -412,7 +412,7 @@ int32_t max17055_fullcapnom_get(max17055_ctx_t *ctx, uint16_t *val)
     return ret;
 }
 
-int32_t max17055_fullcapnom_set(max17055_ctx_t *ctx, uint16_t val)
+int32_t max17055_full_cap_nom_set(max17055_ctx_t *ctx, uint16_t val)
 {
     int32_t ret;
     short_uint8 _val;
@@ -471,7 +471,7 @@ int32_t max17055_learncfg_get(max17055_ctx_t *ctx, max17055_learncfg_t *val)
 
 // int32_t max17055_dietemp_get(max17055_ctx_t *ctx, uint16_t *val);
 
-int32_t max17055_fullcap_get(max17055_ctx_t *ctx, uint16_t *val);
+int32_t max17055_full_cap_get(max17055_ctx_t *ctx, uint16_t *val);
 
 int32_t max17055_rcomp0_set(max17055_ctx_t *ctx, uint16_t val)
 {
@@ -742,7 +742,7 @@ int32_t max17055_modelcfg_get(max17055_ctx_t *ctx, max17055_modelcfg_t *val)
 //     return ret;
 // }
 
-int32_t max17055_qrTable00_set(max17055_ctx_t *ctx, uint16_t val)
+int32_t max17055_qr_table00_set(max17055_ctx_t *ctx, uint16_t val)
 {
     int32_t ret;
     short_uint8 _val;
@@ -751,7 +751,7 @@ int32_t max17055_qrTable00_set(max17055_ctx_t *ctx, uint16_t val)
     return ret;
 }
 
-int32_t max17055_qrTable10_set(max17055_ctx_t *ctx, uint16_t val)
+int32_t max17055_qr_table10_set(max17055_ctx_t *ctx, uint16_t val)
 {
     int32_t ret;
     short_uint8 _val;
@@ -760,7 +760,7 @@ int32_t max17055_qrTable10_set(max17055_ctx_t *ctx, uint16_t val)
     return ret;
 }
 
-int32_t max17055_qrTable20_set(max17055_ctx_t *ctx, uint16_t val)
+int32_t max17055_qr_table20_set(max17055_ctx_t *ctx, uint16_t val)
 {
     int32_t ret;
     short_uint8 _val;
@@ -769,7 +769,7 @@ int32_t max17055_qrTable20_set(max17055_ctx_t *ctx, uint16_t val)
     return ret;
 }
 
-int32_t max17055_qrTable30_set(max17055_ctx_t *ctx, uint16_t val)
+int32_t max17055_qr_table30_set(max17055_ctx_t *ctx, uint16_t val)
 {
     int32_t ret;
     short_uint8 _val;
@@ -778,7 +778,7 @@ int32_t max17055_qrTable30_set(max17055_ctx_t *ctx, uint16_t val)
     return ret;
 }
 
-int32_t max17055_qrTable00_get(max17055_ctx_t *ctx, uint16_t *val)
+int32_t max17055_qr_table00_get(max17055_ctx_t *ctx, uint16_t *val)
 {
     int32_t ret;
     short_uint8 _val;
@@ -787,7 +787,7 @@ int32_t max17055_qrTable00_get(max17055_ctx_t *ctx, uint16_t *val)
     return ret;
 }
 
-int32_t max17055_qrTable10_get(max17055_ctx_t *ctx, uint16_t *val)
+int32_t max17055_qr_table10_get(max17055_ctx_t *ctx, uint16_t *val)
 {
     int32_t ret;
     short_uint8 _val;
@@ -796,7 +796,7 @@ int32_t max17055_qrTable10_get(max17055_ctx_t *ctx, uint16_t *val)
     return ret;
 }
 
-int32_t max17055_qrTable20_get(max17055_ctx_t *ctx, uint16_t *val)
+int32_t max17055_qr_table20_get(max17055_ctx_t *ctx, uint16_t *val)
 {
     int32_t ret;
     short_uint8 _val;
@@ -805,7 +805,7 @@ int32_t max17055_qrTable20_get(max17055_ctx_t *ctx, uint16_t *val)
     return ret;
 }
 
-int32_t max17055_qrTable30_get(max17055_ctx_t *ctx, uint16_t *val)
+int32_t max17055_qr_table30_get(max17055_ctx_t *ctx, uint16_t *val)
 {
     int32_t ret;
     short_uint8 _val;
@@ -814,7 +814,7 @@ int32_t max17055_qrTable30_get(max17055_ctx_t *ctx, uint16_t *val)
     return ret;
 }
 
-int32_t max17055_vfocv_get(max17055_ctx_t *ctx, uint16_t *val)
+int32_t max17055_vf_ocv_get(max17055_ctx_t *ctx, uint16_t *val)
 {
     int32_t ret;
     short_uint8 _val;
